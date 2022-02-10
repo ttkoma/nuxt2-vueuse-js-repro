@@ -1,3 +1,5 @@
+import {resolve} from "path";
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -41,5 +43,11 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  },
+
+  alias: {
+    "@vueuse/core": resolve(__dirname, "node_modules/@vueuse/core/index.mjs"),
+    "@vueuse/shared": resolve(__dirname, "node_modules/@vueuse/shared/index.mjs"),
   }
+
 }
